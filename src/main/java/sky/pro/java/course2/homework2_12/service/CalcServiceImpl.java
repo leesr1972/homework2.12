@@ -6,8 +6,6 @@ import java.util.Optional;
 
 @Service
 public class CalcServiceImpl implements CalcService {
-    private int num1;
-    private int num2;
 
     @Override
     public String getSum(Optional<Integer> num1, Optional<Integer> num2) {
