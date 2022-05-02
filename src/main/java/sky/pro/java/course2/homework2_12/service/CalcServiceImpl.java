@@ -51,6 +51,10 @@ public class CalcServiceImpl implements CalcService {
         if (num2.isEmpty()) {
             return "Ошибка! Вы не ввели параметр num2.";
         }
+        if (num2.get() == 0) {
+            throw new IllegalArgumentException("Деление на 0 равно бесконечности. " +
+                    "Это очень сложно. Исправьте пожалуйста параметр num2.");
+        }
         float div = num1.get() / num2.get();
         return num1.get() + " / " + num2.get() + " = " + div;
     }
